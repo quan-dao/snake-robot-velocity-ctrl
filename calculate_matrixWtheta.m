@@ -1,0 +1,22 @@
+function f=calculate_matrixWtheta(theta)
+theta1=theta(1);
+theta2=theta(2);
+theta3=theta(3);
+theta4=theta(4);
+theta5=theta(5);
+theta6=theta(6);
+theta7=theta(7);
+theta8=theta(8);
+
+global  m l 
+Wr1=[ 0, -l^2*m*((13*cos(theta1)*sin(theta2))/8 - (13*cos(theta2)*sin(theta1))/8), -l^2*m*((11*cos(theta1)*sin(theta3))/8 - (11*cos(theta3)*sin(theta1))/8), -l^2*m*((9*cos(theta1)*sin(theta4))/8 - (9*cos(theta4)*sin(theta1))/8), -l^2*m*((7*cos(theta1)*sin(theta5))/8 - (7*cos(theta5)*sin(theta1))/8), -l^2*m*((5*cos(theta1)*sin(theta6))/8 - (5*cos(theta6)*sin(theta1))/8), -l^2*m*((3*cos(theta1)*sin(theta7))/8 - (3*cos(theta7)*sin(theta1))/8), -l^2*m*((cos(theta1)*sin(theta8))/8 - (cos(theta8)*sin(theta1))/8)];
+Wr2=[ l^2*m*((13*cos(theta1)*sin(theta2))/8 - (13*cos(theta2)*sin(theta1))/8), 0, -l^2*m*((33*cos(theta2)*sin(theta3))/8 - (33*cos(theta3)*sin(theta2))/8), -l^2*m*((27*cos(theta2)*sin(theta4))/8 - (27*cos(theta4)*sin(theta2))/8), -l^2*m*((21*cos(theta2)*sin(theta5))/8 - (21*cos(theta5)*sin(theta2))/8), -l^2*m*((15*cos(theta2)*sin(theta6))/8 - (15*cos(theta6)*sin(theta2))/8), -l^2*m*((9*cos(theta2)*sin(theta7))/8 - (9*cos(theta7)*sin(theta2))/8), -l^2*m*((3*cos(theta2)*sin(theta8))/8 - (3*cos(theta8)*sin(theta2))/8)];
+Wr3=[ l^2*m*((11*cos(theta1)*sin(theta3))/8 - (11*cos(theta3)*sin(theta1))/8), l^2*m*((33*cos(theta2)*sin(theta3))/8 - (33*cos(theta3)*sin(theta2))/8), 0, -l^2*m*((45*cos(theta3)*sin(theta4))/8 - (45*cos(theta4)*sin(theta3))/8), -l^2*m*((35*cos(theta3)*sin(theta5))/8 - (35*cos(theta5)*sin(theta3))/8), -l^2*m*((25*cos(theta3)*sin(theta6))/8 - (25*cos(theta6)*sin(theta3))/8), -l^2*m*((15*cos(theta3)*sin(theta7))/8 - (15*cos(theta7)*sin(theta3))/8), -l^2*m*((5*cos(theta3)*sin(theta8))/8 - (5*cos(theta8)*sin(theta3))/8)];
+Wr4=[ l^2*m*((9*cos(theta1)*sin(theta4))/8 - (9*cos(theta4)*sin(theta1))/8), l^2*m*((27*cos(theta2)*sin(theta4))/8 - (27*cos(theta4)*sin(theta2))/8), l^2*m*((45*cos(theta3)*sin(theta4))/8 - (45*cos(theta4)*sin(theta3))/8), 0, -l^2*m*((49*cos(theta4)*sin(theta5))/8 - (49*cos(theta5)*sin(theta4))/8), -l^2*m*((35*cos(theta4)*sin(theta6))/8 - (35*cos(theta6)*sin(theta4))/8), -l^2*m*((21*cos(theta4)*sin(theta7))/8 - (21*cos(theta7)*sin(theta4))/8), -l^2*m*((7*cos(theta4)*sin(theta8))/8 - (7*cos(theta8)*sin(theta4))/8)];
+Wr5=[ l^2*m*((7*cos(theta1)*sin(theta5))/8 - (7*cos(theta5)*sin(theta1))/8), l^2*m*((21*cos(theta2)*sin(theta5))/8 - (21*cos(theta5)*sin(theta2))/8), l^2*m*((35*cos(theta3)*sin(theta5))/8 - (35*cos(theta5)*sin(theta3))/8), l^2*m*((49*cos(theta4)*sin(theta5))/8 - (49*cos(theta5)*sin(theta4))/8), 0, -l^2*m*((45*cos(theta5)*sin(theta6))/8 - (45*cos(theta6)*sin(theta5))/8), -l^2*m*((27*cos(theta5)*sin(theta7))/8 - (27*cos(theta7)*sin(theta5))/8), -l^2*m*((9*cos(theta5)*sin(theta8))/8 - (9*cos(theta8)*sin(theta5))/8)];
+Wr6=[ l^2*m*((5*cos(theta1)*sin(theta6))/8 - (5*cos(theta6)*sin(theta1))/8), l^2*m*((15*cos(theta2)*sin(theta6))/8 - (15*cos(theta6)*sin(theta2))/8), l^2*m*((25*cos(theta3)*sin(theta6))/8 - (25*cos(theta6)*sin(theta3))/8), l^2*m*((35*cos(theta4)*sin(theta6))/8 - (35*cos(theta6)*sin(theta4))/8), l^2*m*((45*cos(theta5)*sin(theta6))/8 - (45*cos(theta6)*sin(theta5))/8), 0, -l^2*m*((33*cos(theta6)*sin(theta7))/8 - (33*cos(theta7)*sin(theta6))/8), -l^2*m*((11*cos(theta6)*sin(theta8))/8 - (11*cos(theta8)*sin(theta6))/8)];
+Wr7=[ l^2*m*((3*cos(theta1)*sin(theta7))/8 - (3*cos(theta7)*sin(theta1))/8), l^2*m*((9*cos(theta2)*sin(theta7))/8 - (9*cos(theta7)*sin(theta2))/8), l^2*m*((15*cos(theta3)*sin(theta7))/8 - (15*cos(theta7)*sin(theta3))/8), l^2*m*((21*cos(theta4)*sin(theta7))/8 - (21*cos(theta7)*sin(theta4))/8), l^2*m*((27*cos(theta5)*sin(theta7))/8 - (27*cos(theta7)*sin(theta5))/8), l^2*m*((33*cos(theta6)*sin(theta7))/8 - (33*cos(theta7)*sin(theta6))/8), 0, -l^2*m*((13*cos(theta7)*sin(theta8))/8 - (13*cos(theta8)*sin(theta7))/8)];
+Wr8=[ l^2*m*((cos(theta1)*sin(theta8))/8 - (cos(theta8)*sin(theta1))/8), l^2*m*((3*cos(theta2)*sin(theta8))/8 - (3*cos(theta8)*sin(theta2))/8), l^2*m*((5*cos(theta3)*sin(theta8))/8 - (5*cos(theta8)*sin(theta3))/8), l^2*m*((7*cos(theta4)*sin(theta8))/8 - (7*cos(theta8)*sin(theta4))/8), l^2*m*((9*cos(theta5)*sin(theta8))/8 - (9*cos(theta8)*sin(theta5))/8), l^2*m*((11*cos(theta6)*sin(theta8))/8 - (11*cos(theta8)*sin(theta6))/8), l^2*m*((13*cos(theta7)*sin(theta8))/8 - (13*cos(theta8)*sin(theta7))/8), 0];
+matW=[Wr1;Wr2;Wr3;Wr4;Wr5;Wr6;Wr7;Wr8];
+
+f=matW;
